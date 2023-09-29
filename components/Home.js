@@ -46,7 +46,7 @@ function Home() {
     const movies = moviesData.map((data, i) => {
     const isLiked = likedMovies.some(movie => movie === data.title);
     const overview = data.overview
-    return <Movie key={i} updateLikedMovies={updateLikedMovies} isLiked={isLiked} title={data.title} overview={overview.slice(0,251) + '...'} poster={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} voteAverage={data.voteAverage} voteCount={data.vote_count} />;
+    return <Movie key={i} updateLikedMovies={updateLikedMovies} isLiked={isLiked} title={data.title} overview={overview.slice(0,251) + '...'} poster={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} voteAverage={data.vote_average} voteCount={data.vote_count} />;
   });
 
   return (
